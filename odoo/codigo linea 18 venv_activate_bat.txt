@@ -1,0 +1,3 @@
+@if not defined VIRTUAL_ENV_DISABLE_PROMPT (
+    @set "PROMPT=(%VIRTUAL_ENV_PROMPT%) %PROMPT%"
+)
