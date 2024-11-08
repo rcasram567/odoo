@@ -10,5 +10,6 @@ class Presupuesto(models.Model):
         ('confirmed', 'Confirmado'),
         ('done', 'Hecho')
     ], string='Estado', default='draft')
-    is_active = fields.Boolean(string='Activo', default=True)
+    is_active = fields.Boolean(string='Activo', default=False)
     start_date = fields.Date(string='Fecha de Inicio')
+    persona_ventas = fields.Many2one(comodel_name="res.partner")

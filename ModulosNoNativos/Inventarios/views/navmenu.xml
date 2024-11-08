@@ -1,19 +1,12 @@
 <odoo>
-    <record id="abrir_mi_presupuesto" model="ir.actions.act_window">
-        <field name="name">Presupuesto</field>
+    <record id="abrir_inventario" model="ir.actions.act_window">
+        <field name="name">Mi Presupuesto</field>
         <field name="res_model">presupuesto</field>
         <field name="view_mode">tree,form</field>
     </record>
 
-
-    <record id="abrir_presupuesto_facil" model="ir.actions.act_window">
-        <field name="name">Presupuesto Fácil</field>
-        <field name="res_model">presupuesto</field>
-        <field name="view_mode">kanban,form</field>
-    </record>
-
-    <menuitem id="menu_principal" name="Mi inventario"/>
-    <menuitem id="menu_horizontal" name="Todo el inventario" parent="menu_principal"/>
-    <menuitem id="menu_vertical_presupuesto" name="Presupuesto" parent="menu_horizontal" action="abrir_mi_presupuesto"/>
-    <menuitem id="menu_vertical_presupuesto" name="Presupuesto facil" parent="menu_horizontal" action="abrir_presupuesto_facil"/>
+    <menuitem id="menu_principal" name="Mi inventario" action="abrir_inventario"/>
+    <menuitem id="menu_horizontal" name="Todo el inventario" parent="menu_principal" action="abrir_inventario"/>
+    <menuitem id="menu_vertical_presupuesto" name="Presupuesto" parent="menu_horizontal" action="abrir_inventario"/>
+    <menuitem id="menu_vertical_presupuesto_facil" name="Presupuesto facil" parent="menu_horizontal" action="abrir_inventario"/>
 </odoo>
