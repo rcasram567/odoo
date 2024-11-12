@@ -28,7 +28,7 @@
                 <field name="status" widget="statusbar" statusbar_visible="draft,confirmed"/>
             </header>-->
             <sheet>
-                <widget name="web_ribbon" title="Archivado" bg_color="bg-primary"/>
+                <widget name="web_ribbon" title="Archivado" bg_color="bg-danger"/>
 
                 <group>
                     <div style="width: 100%; background-color: #f0f0f0; padding: 10px; border-bottom: 2px solid #ccc; margin-bottom:50px">
@@ -37,12 +37,15 @@
                     </div>
                     <br/>
                     <group>
+                        <field name="image_1920" widget="image"/>
                         <field name="name" string="Nombre del Presupuesto"/>
                         <field name="start_date" string="Fecha de Inicio"/>
+                        <field name="genero_ids" string="Tipo Producto"/>
                     </group>
                     <group>
                         <field name="price" string="Precio"/>
                         <field name="status" string="Estado"/>
+                        <field name="persona_ventas" string="Contacto vendedor"/>
                         <field name="is_active" string="Activo?"/>
                     </group>
                 </group>
