@@ -30,33 +30,13 @@
             <sheet>
                 <widget name="web_ribbon" title="Archivado" bg_color="bg-danger"/>
 
-                <group>
-                    <div style="width: 100%; background-color: #f0f0f0; padding: 10px; border-bottom: 2px solid #ccc; margin-bottom:50px">
-                        <h2 style="margin: 0; font-size: 24px; text-align: center;">Detalles de Presupuesto</h2>
-                         <p style="text-align: center;">Complete la siguiente información para registrar un nuevo presupuesto.</p>
-                    </div>
-                    <br/>
-                    <group>
-                        <field name="image_1920" widget="image"/>
-                        <field name="name" string="Nombre del Presupuesto"/>
-                        <field name="start_date" string="Fecha de Inicio"/>
-                        <field name="genero_ids" string="Tipo Producto"/>
-                    </group>
-                    <group>
-                        <field name="price" string="Precio"/>
-                        <field name="status" string="Estado"/>
-                        <field name="persona_ventas" string="Contacto vendedor"/>
-                        <field name="is_active" string="Activo?"/>
-                    </group>
-                </group>
-                <!--<div style="display:block; width: 100%; background-color: #f0f0f0; padding: 10px; border-bottom: 2px solid #ccc; margin-bottom:50px">
+                <div style="display:block; width: 100%; background-color: #f0f0f0; padding: 10px; border-bottom: 2px solid #ccc; margin-bottom:50px">
                     <h2 style="margin: 0; font-size: 24px; text-align: center;">
                         <field name="name" placeholder="Nombre del Presupuesto" required="1" default_focus="1"/>
                     </h2>
                     <p style="text-align: center;">Complete la siguiente información para registrar un nuevo presupuesto.</p>
                 </div>
                 <br/>
-
 
                 <div style="display: flex; justify-content: space-between;">
 
@@ -68,16 +48,12 @@
                     <group style="margin-right: 10px;">
                         <field name="genero_ids" string="Tipo Producto" widget="many2many_checkboxes"/>
                         <field name="puntuacion_vendedor_introducir" placeholder="Introducir valoración del vendedor" />
-                         <field name="categoria_ventas"
-                        options="{'no_create': True, 'no_quick_create': True}"/>
                     </group>
 
                     <group>
                         <field name="price" string="Precio"/>
                         <field name="status" string="Estado"/>
-                        <field name="persona_ventas" string="Contacto vendedor"
-                        domain="[('category_id', 'in', [categoria_ventas])]"
-                        options="{'no_create': True, 'no_quick_create': True}"/>
+                        <field name="persona_ventas" string="Contacto vendedor"/>
                         <field name="is_active" widget="boolean_toggle"/>
                     </group>
                 </div>
@@ -91,14 +67,9 @@
 
                     <group>
                         <field name="Subir_archivo" filename="nombre_archivo"/>
-                        <field name="nombre_archivo" invisible="1"/>
-                        <field name="link" widget="url"/>
-
-
-
                     </group>
 
-                </group>-->
+                </group>
 
             </sheet>
         </form>
