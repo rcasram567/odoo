@@ -22,11 +22,11 @@
         <field name="type">form</field>
         <field name="arch" type="xml">
         <form string="Presupuesto">
-            <!--<header>
+            <header>
                 <button string="Confirmar" type="object" name="confirmar_presupuesto" class="oe_hightlight"/>
                 <button string="Terminar" type="object" name="terminar_presupuesto" class="oe_hightlight"/>
                 <field name="status" widget="statusbar" statusbar_visible="draft,confirmed"/>
-            </header>-->
+            </header>
             <sheet>
                 <widget name="web_ribbon" title="Archivado" bg_color="bg-danger"/>
 
@@ -52,7 +52,6 @@
 
                     <group>
                         <field name="price" string="Precio"/>
-                        <field name="status" string="Estado"/>
                         <field name="persona_ventas" string="Contacto vendedor"/>
                         <field name="is_active" widget="boolean_toggle"/>
                     </group>
@@ -67,6 +66,8 @@
 
                     <group>
                         <field name="Subir_archivo" filename="nombre_archivo"/>
+                        <field name="nombre_archivo" invisible="1"/>
+                        <field name="link" widget="url"/>
                     </group>
 
                 </group>
