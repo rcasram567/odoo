@@ -1,7 +1,7 @@
 <odoo>
     <record id="abrir_inventario" model="ir.actions.act_window">
         <field name="name">Mi Presupuesto</field>
-        <field name="res_model">presupuesto</field>
+        <field name="res_model">inventario.presupuesto</field>
         <field name="view_mode">tree,form</field>
     </record>
 

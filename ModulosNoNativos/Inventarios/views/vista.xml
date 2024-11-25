@@ -2,7 +2,7 @@
     <data>
         <record id="view_presupuesto_list" model="ir.ui.view">
             <field name="name">presupuesto.list</field>
-            <field name="model">presupuesto</field>
+            <field name="model">inventario.presupuesto</field>
             <field name="arch" type="xml">
                 <tree string="Lista de Presupuestos">
                     <field name="name"/>
@@ -18,7 +18,7 @@
 
         <record id="view_presupuesto_form" model="ir.ui.view">
         <field name="name">presupuesto.form</field>
-        <field name="model">presupuesto</field>
+        <field name="model">inventario.presupuesto</field>
         <field name="type">form</field>
         <field name="arch" type="xml">
         <form string="Presupuesto">
@@ -46,14 +46,23 @@
                     </group>
 
                     <group style="margin-right: 10px;">
-                        <field name="genero_ids" string="Tipo Producto" widget="many2many_checkboxes"/>
+                        <field name="genero_ids" string="Tipo Género" widget="many2many_checkboxes"/>
                         <field name="puntuacion_vendedor_introducir" placeholder="Introducir valoración del vendedor" />
+                        <field name="categoria_ventas"
+                               options="{'no_create':True, 'no_quick_create':True}"/>
+                        <field name="all_specific_products_selection"/>
+                        <field name="price_with_tax"/>
                     </group>
 
                     <group>
                         <field name="price" string="Precio"/>
-                        <field name="persona_ventas" string="Contacto vendedor"/>
+                        <field name="unidades_producto" string="Unidades del producto"/>
+                        <field name="precio_unitario" string="Precio unitario del producto"/>
+                        <field name="persona_ventas" string="Contacto vendedor"
+                        domain="[('category_id','in',[categoria_ventas])]"
+                        options="{'no_create':True, 'no_quick_create':True}"/>
                         <field name="is_active" widget="boolean_toggle"/>
+
                     </group>
                 </div>
 
